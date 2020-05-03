@@ -5,7 +5,9 @@ const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
 ​
-const OUTPUT_DIR = path.resolve(__dirname, "output")
+// path.resolve() resolves a sequence of paths or path segments into an absolute path.
+const OUTPUT_DIR = path.resolve(__dirname, "output");
+// path.join() method joins all given path segments together using the platform-specific separator as a delimiter, then normalizes the resulting path
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 ​
 const render = require("./lib/htmlRenderer");
