@@ -1,0 +1,30 @@
+{
+  "name": "html-team-generator",
+  "version": "1.0.0",
+  "description": "Node CLI that takes in information about employees and generates an HTML webpage that displays summaries for each person",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node app",
+    "test": "jest --verbose test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connietran-dev/team-generator.git"
+  },
+  "author": "Connie Tran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/connietran-dev/team-generator/issues"
+  },
+  "homepage": "https://github.com/connietran-dev/team-generator",
+  "dependencies": {
+    "inquirer": "^6.3.1"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
