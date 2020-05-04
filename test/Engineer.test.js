@@ -17,7 +17,7 @@ test("Can set id via super", () => {
   expect(e.id).toBe(testValue);
 });
 
-test("Can get email via super", () => {
+test("Can set email via super", () => {
   const testValue = "testeng@test.com";
   const e = new Engineer("David", 122, testValue);
   expect(e.getEmail()).toBe(testValue);

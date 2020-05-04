@@ -17,7 +17,7 @@ test("Can set id via super", () => {
   expect(e.id).toBe(testValue);
 });
 
-test("Can get email via super", () => {
+test("Can set email via super", () => {
   const testValue = "testintern@test.com";
   const e = new Intern("Greg", 687, testValue);
   expect(e.getEmail()).toBe(testValue);
@@ -29,7 +29,7 @@ test("Can set school via constructor", () => {
   expect(e.school).toBe(testValue);
 });
 
-test("getRole() should return \"Intern\"", () => {
+test('getRole() method from parent Employee class should return "Intern"', () => {
   const testValue = "Intern";
   const e = new Intern("Foo", 1, "test@test.com", "UCLA");
   expect(e.getRole()).toBe(testValue);
