@@ -1,5 +1,6 @@
 // External packages
 const inquirer = require('inquirer');
+const fs = require('fs');
 
 // Internal modules
 const Manager = require('./lib/Manager');
@@ -47,13 +48,15 @@ async function confirmEmployee() {
 
         // If yes, they'd like to add another team member, ask whether they'd like to create an Engineer or Intern
         case true:
-            createEmployee();
+            await createEmployee();
     };
 };
 
 
 // Function to create Engineer or Intern
 async function createEmployee() {
+
+    // Would you like to add an Engineer or Intern?
     let employeeRole = await inquirer.prompt(questions.employee);
 
     switch (employeeRole.empRole) {
@@ -66,7 +69,7 @@ async function createEmployee() {
                     engResponses.engGithub);
             employees.push(newEngineer);
             console.log("Thanks! We've added a new engineer to the team: ", newEngineer);
-            confirmEmployee();
+            await confirmEmployee();
             break;
         case 'Intern':
             let internResponses = await inquirer.prompt(questions.intern);
@@ -77,7 +80,7 @@ async function createEmployee() {
                     internResponses.internSchool);
             employees.push(newIntern);
             console.log("Thanks! We've added a new intern to the team: ", newIntern);
-            confirmEmployee();
+            await confirmEmployee();
     };
 
 };
@@ -99,17 +102,27 @@ async function init() {
         // Next, ask if they'd like to create another team member and createEmployee() within confirmEmployee function
         await confirmEmployee();
 
+    } catch (error) {
+        console.log(error);
+    };
 
+    try {
         // After the user has input all employees desired, call the render function
         // and pass an array containing all employee objects
         // The render function will generate and return a block of HTML including templated divs for each employee
 
-        let html = render(employees);
+        let renderedHTML = render(employees);
+        console.log(renderedHTML);
 
+
+        // Take HTML returned from render() function and write to file named team.html in the output folder
+
+        fs.writeFileSync('./output/team.html', renderedHTML);
 
     } catch (error) {
         console.log(error);
-    }
+    };
+
 
 };
 
