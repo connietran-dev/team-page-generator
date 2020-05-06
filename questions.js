@@ -3,7 +3,7 @@ const managerQuestions = [
         type: 'input',
         message: "This application will generate an HTML page for your software engineering team. An engineering team consists of a manager and any number of engineers & interns. First, what is your manager's name?",
         name: 'mgrName',
-        default: 'Ann',
+        default: 'Ann Pleasant',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("A valid name is required.");
@@ -50,11 +50,11 @@ const managerQuestions = [
 ];
 
 
-const createEmployee = [
+const confirmEmployee = [
     {
         type: 'confirm',
         message: "Next, would you like to add another team member to the team?",
-        name: 'createEmp'
+        name: 'confirmEmp'
     }
 ];
 
@@ -73,7 +73,7 @@ const engineerQuestions = [
         type: 'input',
         message: "What is your software engineer's name?",
         name: 'engName',
-        default: 'Louise',
+        default: 'Connie Tran',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("A valid name is required.");
@@ -97,7 +97,7 @@ const engineerQuestions = [
         type: 'input',
         message: "What is your engineer's email address?",
         name: 'engEmail',
-        default: 'testeng@test.com',
+        default: 'connietrandev@gmail.com',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("A valid email address is required.");
@@ -124,7 +124,7 @@ const internQuestions = [
         type: 'input',
         message: "What is your intern's name?",
         name: 'internName',
-        default: 'Greg',
+        default: 'Ryan Howard',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("A valid name is required.");
@@ -148,7 +148,7 @@ const internQuestions = [
         type: 'input',
         message: "What is your intern's email address?",
         name: 'internEmail',
-        default: 'testintern@test.com',
+        default: 'rhoward@theoffice.com',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("A valid email address is required.");
@@ -172,7 +172,7 @@ const internQuestions = [
 
 module.exports = {
     manager: managerQuestions,
-    create: createEmployee,
+    create: confirmEmployee,
     employee: employeeType,
     engineer: engineerQuestions,
     intern: internQuestions
