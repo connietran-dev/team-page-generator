@@ -43,7 +43,7 @@ async function confirmEmployee() {
     switch (confirmEmployee.confirmEmp) {
         case false:
             console.log("Thank you for your input so far. Here are your team members: ", employees);
-            console.log('Generating the HTML page next...');
+            console.log('Generating your HTML page next...');
             return;
 
         // If yes, they'd like to add another team member, ask whether they'd like to create an Engineer or Intern
@@ -107,22 +107,20 @@ async function init() {
     };
 
     try {
-        // After the user has input all employees desired, call the render function
-        // and pass an array containing all employee objects
-        // The render function will generate and return a block of HTML including templated divs for each employee
+        /* After the user has input all employees desired, call the render function and pass an array containing all employee objects.
 
+        The render function will generate and return a block of HTML including templated divs for each employee. */
         let renderedHTML = render(employees);
-        console.log(renderedHTML);
 
 
-        // Take HTML returned from render() function and write to file named team.html in the output folder
-
+        /* Take HTML returned from render() function and write to file named team.html in the output folder */
         fs.writeFileSync('./output/team.html', renderedHTML);
+
+        console.log('Success! Your HTML page has been generated in the output folder.')
 
     } catch (error) {
         console.log(error);
-    };
-
+    }
 
 };
 
