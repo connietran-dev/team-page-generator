@@ -1,10 +1,10 @@
-# Team Employee Summary - Template Engine: OOP & ES6
+# Team Employee Summary - Template Engine: OOP, Node, & ES6
 
 ## Application Description
 
 This application is a Node command line application that takes in information about team members & employees of a software engineering team and generates an HTML webpage that displays summaries for each team member. 
 
-One of the most important aspects of programming is writing code that is readable, reliable, and maintainable. Oftentimes, *how* we design our code is just as important as the code itself. Since testing is a key piece in making code maintainable, this application also includes a suites of Jest unit tests. And the development of this project was focused on test-driven development.
+One of the most important aspects of programming is writing code that is readable, reliable, and maintainable. Often times, *how* we design our code is just as important as the code itself. Since testing is a key piece in making code maintainable, this application also includes a suites of Jest unit tests. And the development of this project was focused on test-driven development.
 
 The live page can be viewed on GitHub Pages here: https://connietran-dev.github.io/team-page-generator/index.html
 
