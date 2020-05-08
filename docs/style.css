@@ -8,8 +8,13 @@ h1 {
     font-size: 60px;
 }
 
+.jumbotron {
+    border-radius: 0;
+}
+
 .employee-card {
     min-width: 275px;
+    max-width: 325px;
     margin: 50px 25px;
     box-shadow: 12px 12px #888888;
 }
