@@ -17,6 +17,8 @@ The live page can be viewed on GitHub Pages here: https://connietran-dev.github.
 
 This Node CLI will prompt you to generate a webpage for your software engineering team. The application will prompt you for information about the team manager and then information about the team members. You can input any number of team members, including a mix of engineers and interns. Validation is implemented to ensure that information provided is in the proper expected format.
 
+![Gif demo of team-page-generator CLI](images/teampage-demo.gif)
+
 ### Roster output
 
 When you have completed building the team, the application then generates an `index.html` page in the `docs/` directory, that displays a nicely formatted team roster based on the information you provided. Each team member displays the following:
