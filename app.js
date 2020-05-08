@@ -113,10 +113,11 @@ async function init() {
         let renderedHTML = render(employees);
 
 
-        /* Take HTML returned from render() function and write to file named team.html in the output folder */
-        fs.writeFileSync('./output/team.html', renderedHTML);
+        /* Take HTML returned from render() function and write to file named team.html in the docs folder */
+        // I have named it docs instead of output so that the page appears on GitHub pages
+        fs.writeFileSync('./docs/index.html', renderedHTML);
 
-        console.log('Success! Your HTML page has been generated in the output folder.')
+        console.log('Success! Your HTML page has been generated in the docs folder.')
 
     } catch (error) {
         console.log(error);
